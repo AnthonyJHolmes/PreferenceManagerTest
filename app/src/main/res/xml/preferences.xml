@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory
+        android:title="Star Fantasia Basic Settings">
+        <CheckBoxPreference
+            android:key="parent_explorer_preference"
+            android:title="Explorer"
+            android:summary="Explore our Galaxy"
+            android:defaultValue="false"/>
+        <CheckBoxPreference
+            android:key="child_explorer_preference"
+            android:dependency="parent_explorer_preference"
+            android:layout="?android:attr/preferenceLayoutChild"
+            android:title="Extra-Galactic"
+            android:summary="Explore beyond our Galaxy"
+            android:defaultValue="false"/>
+        <CheckBoxPreference
+            android:key="guide_preference"
+            android:title="Guide"
+            android:summary="Guide Explorers"
+            android:defaultValue="false"/>
+        <CheckBoxPreference
+            android:key="citizen_preference"
+            android:title="Citizen"
+            android:summary="Galactic citizen"
+            android:defaultValue="false"/>
+
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:title="Galatic Identification">
+
+        <EditTextPreference
+            android:key="name_preference"
+            android:title="Galactic Name"
+            android:summary="What's your Galactic name?"
+            android:dialogTitle="Enter your Galactic Name"/>
+
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:title="Using an Intent">
+        <PreferenceScreen
+            android:title="Headers Preferences"
+            android:summary="Use intent to see Headers">
+            <intent android:targetPackage="anthonyjholmes.github.io.preferencemanagertest"
+                android:targetClass="anthonyjholmes.github.io.preferencemanagertest.HeadersActivity"/>
+        </PreferenceScreen>
+    </PreferenceCategory>
+</PreferenceScreen>
